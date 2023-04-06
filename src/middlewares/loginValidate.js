@@ -1,7 +1,7 @@
 const { loginSchema } = require('../joi/schemas');
 const errorListener = require('../utils/errorListener');
 
-const loginValidate = (req, res, next) => {
+const loginValidate = (req, _res, next) => {
   const { error } = loginSchema.validate(req.body);
 
   if (error) {
