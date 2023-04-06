@@ -5,7 +5,7 @@ const UserSchema = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    display_name: {
+    displayName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
