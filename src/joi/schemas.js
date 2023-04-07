@@ -18,8 +18,15 @@ const categorySchema = Joi.object({
   'string.empty': '"{#label}" is required',
 });
 
+const postSchema = Joi.object({
+  title: Joi.string().required(),
+  content: Joi.string().required(),
+  categoryIds: Joi.array().items(Joi.number()).required(),
+});
+
 module.exports = {
   loginSchema,
   userSchema,
   categorySchema,
+  postSchema,
 };

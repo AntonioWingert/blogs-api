@@ -26,6 +26,7 @@ const postSchema = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
       allowNull: false,
     },
+    
   }, {
     timestamps: false,
     tableName: 'blog_posts',
