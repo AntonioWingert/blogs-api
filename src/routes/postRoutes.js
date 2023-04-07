@@ -7,10 +7,17 @@ const putPostValidate = require('../middlewares/putPostValidate');
 const router = Router();
 
 router.use(authValidate);
+
 router.post('/post', postValidate, postController.create);
-router.get('/post', postController.getAll);
-router.get('/post/:id', postController.getById);
-router.put('/post/:id', putPostValidate, postController.update);
+
+router.get('/post/search', postController.search);
+
 router.delete('/post/:id', postController.remove);
+
+router.get('/post', postController.getAll);
+
+router.get('/post/:id', postController.getById);
+
+router.put('/post/:id', putPostValidate, postController.update);
 
 module.exports = router;
