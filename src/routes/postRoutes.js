@@ -7,5 +7,6 @@ const router = Router();
 
 router.use(authValidate);
 router.post('/post', postValidate, postController.create);
+router.get('/post', postController.getAll);
 
 module.exports = router;
