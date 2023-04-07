@@ -10,7 +10,9 @@ const login = async (email, password) => {
     throw errorListener(400, 'Invalid fields');
   }
 
-  const token = generateToken(user.dataValues);
+  const { displayName, id } = user;
+
+  const token = generateToken({ id, displayName });
 
   return token;
 };

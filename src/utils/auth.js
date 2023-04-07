@@ -10,6 +10,19 @@ const generateToken = (payload) => {
   return token;
 };
 
+const verifyToken = (token) => {
+  const validToken = jwt.verify(token, JWT_SECRET, (err, decoded) => {
+    if (err) {
+      return false;
+    }
+
+    return decoded;
+  });
+
+  return validToken;
+};
+
 module.exports = {
   generateToken,
+  verifyToken,
 };
