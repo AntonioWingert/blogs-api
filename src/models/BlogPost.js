@@ -17,6 +17,7 @@ const postSchema = (sequelize, DataTypes) => {
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      foreignKey: true,
     },
     published: {
       type: DataTypes.DATE,
